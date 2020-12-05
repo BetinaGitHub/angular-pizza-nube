@@ -5,14 +5,16 @@
             <th>Variedad</th>
             <th>Ingredientes</th>
             <th>Precio</th>
+            <th>Disponible</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><img [src]="pizza.image" alt="pizza.image" /> </td>
-            <td>{{pizza.name}}</td>
+        <tr *ngFor="let pizza of pizzas" [class]="{'promo': pizza.promo}">
+            <td><img width="90" class="img-thumbnail" [src]="pizza.image" [alt]="pizza.name"></td>
+            <td class="uppercase">{{pizza.name }}</td>
             <td>{{pizza.desc}}</td>
-            <td>{{pizza.price}}</td>
+            <td>{{pizza.price | currency}}</td>
+            <td><span class="badge badge-pill badge-dark" *ngIf="pizza.available==false ">NO ESTA DISPONIBLE</span></td>
         </tr>
     </tbody>
 </table>
