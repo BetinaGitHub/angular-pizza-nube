@@ -1,8 +1,10 @@
 export interface Pizza{
-    "name": string;
-    "desc": string;
-    "price": number;
-    "available": boolean;
-    "image" : string;
-    "promo":boolean;
+    name: string;
+    desc: string;
+    price: number;
+    available: number;
+    image : string;
+    promo:boolean;
+    quantity: number;
+
 }
