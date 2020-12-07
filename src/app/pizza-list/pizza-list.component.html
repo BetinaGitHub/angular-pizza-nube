@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table text-center table-striped">
     <thead class="thead-dark">
         <tr>
             <th>Foto</th>
@@ -16,11 +16,11 @@
             <td>{{pizza.desc}}</td>
             <td>{{pizza.price | currency}}</td>
             <td><span class="badge badge-pill badge-dark" *ngIf="pizza.available==0 ">NO ESTA DISPONIBLE</span></td>
-            <td width="15%">
+            <td>
                 <div>
-                    <button type="button" class="btn btn-primary btn-sm" (click)="downQuantity(pizza)"> - </button>
-                    <span> <input type="text" [(ngModel)]="pizza.quantity" > </span>
-                    <button type="button " class="btn btn-primary btn-sm " (click)="upQuantity(pizza)"> + </button>
+                    <button type="button" class="text-center btn btn-primary btn-sm" (click)="downQuantity(pizza)">  -  </button>
+                    <span> <input class="text-center" type="text" [(ngModel)]="pizza.quantity" > </span>
+                    <button type="button " class="text-center btn btn-primary btn-sm" (click)="upQuantity(pizza)">  +  </button>
                 </div>
             </td>
         </tr>

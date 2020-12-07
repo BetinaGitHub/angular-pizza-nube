@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 
 import { FormsModule } from '@angular/forms';
+import { ShopCartComponent } from './shop-cart/shop-cart.component';
+import { AboutComponent } from './about/about.component';
+import { PizzasComponent } from './pizzas/pizzas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaListComponent,  
+    PizzaListComponent,
+    ShopCartComponent,
+    AboutComponent,
+    PizzasComponent,  
   ],
   imports: [
     BrowserModule,
