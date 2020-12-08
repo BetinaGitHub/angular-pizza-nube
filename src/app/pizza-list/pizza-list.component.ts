@@ -9,7 +9,7 @@ import { Pizza } from './Pizza';
 
 })
 export class PizzaListComponent implements OnInit {
-  
+
   pizzas: Pizza[] = [
     {
       name: 'Mozzzarella',
@@ -46,17 +46,7 @@ export class PizzaListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(pizza: Pizza):void {
-    if (pizza.quantity < pizza.available) {
-      pizza.quantity++;
-    }
-  }
-
-  downQuantity(pizza: Pizza):void {
-    if (pizza.quantity > 0) {
-      pizza.quantity--;
-    }
- 
-  }
-
+  maxLimit(msj: string){
+     alert(msj)
+      }
 }
