@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service'
 import { Pizza } from './Pizza';
 
 
@@ -38,13 +39,20 @@ export class PizzaListComponent implements OnInit {
       promo: false,
       quantity: 0,
     },
-];
+]
 
-
-  constructor() { }
+  constructor(private cart: CartService) {
+  }
 
   ngOnInit(): void {
   }
+
+    addToCart(pizza): void{
+       this.cart.addToCart(pizza);
+       pizza.available -=  pizza.quantity;
+       pizza.quantity = 0;
+    }
+
 
   maxLimit(msj: string){
      alert(msj)

@@ -1,4 +1,6 @@
-<table class="table text-center table-striped">
+<h2 class="uppercase">
+    VARIEDAD DE PIZZAS</h2>
+<table class="table text-center">
     <thead class="thead-dark">
         <tr>
             <th>Foto</th>
@@ -6,7 +8,8 @@
             <th>Ingredientes</th>
             <th>Precio</th>
             <th>Disponible</th>
-            <th class="center"> Agregar </th>
+            <th>Cantidad.Pedido</th>
+            <th>Agregar</th>
         </tr>
     </thead>
     <tbody>
@@ -15,21 +18,14 @@
             <td class="uppercase">{{pizza.name }}</td>
             <td>{{pizza.desc}}</td>
             <td>{{pizza.price | currency}}</td>
-
-            <!--   <span class="badge badge-warning" *ngIf="prenda.stock==0; else disponible">Sin Stock</span>
-    <ng-template #disponible>
-        <span>Disponible</span>
-    </ng-template>
-  </td>
-  <td>
-    <app-input-integer [(quantity)]="prenda.quantity" [max]="prenda.stock" *ngIf="!prenda.stock==0" (maxReached)="maxReached($event)"></app-input-integer>
-  </td> -->
-
             <td>
                 <span class="badge badge-pill badge-dark" *ngIf="pizza.available==0">NO ESTA DISPONIBLE</span>
             </td>
             <td>
                 <app-input-integer [(quantity)]="pizza.quantity" [max]="pizza.available" *ngIf="pizza.available" (maxLimit)="maxLimit($event)"></app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="addToCart(pizza)">Agregar</button>
             </td>
         </tr>
     </tbody>

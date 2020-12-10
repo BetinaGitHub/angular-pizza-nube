@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pizza } from '../pizza-list/Pizza'
-
 @Component({
   selector: 'app-input-integer',
   templateUrl: './input-integer.component.html',
@@ -33,7 +32,6 @@ export class InputIntegerComponent implements OnInit {
     }
     else
       this.maxLimit.emit("No hay suficiente stock");
-
   }
 
   downQuantity():void {
@@ -43,9 +41,10 @@ export class InputIntegerComponent implements OnInit {
     }
    }
 
-   changeQuantity(event):void {
-       console.log(event);
+  changeQuantity(event):void {
+       console.log(event.key);
        this.quantityChange.emit(this.quantity);
    }
+
 
 }

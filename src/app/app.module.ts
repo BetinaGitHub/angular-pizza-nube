@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 
 import { FormsModule } from '@angular/forms';
-import { ShopCartComponent } from './shop-cart/shop-cart.component';
 import { AboutComponent } from './about/about.component';
+import { ShopCartComponent } from './shop-cart/shop-cart.component';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 
@@ -18,7 +18,7 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     ShopCartComponent,
     AboutComponent,
     PizzasComponent,
-    InputIntegerComponent,  
+    InputIntegerComponent,
   ],
   imports: [
     BrowserModule,
